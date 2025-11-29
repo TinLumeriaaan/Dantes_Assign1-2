@@ -11,7 +11,7 @@
             font-family: 'Quicksand', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://img.freepik.com/premium-vector/bag-background_16643-1435.jpg?semt=ais_hybrid&w=740&q=80');
+            background-image: url('https://static.vecteezy.com/system/resources/previews/011/935/115/non_2x/bags-seamless-background-free-vector.jpg');
             background-repeat: no-repeat;
             background-size: cover; 
             background-attachment: fixed;
@@ -98,7 +98,7 @@
         footer {
             text-align: center;
             padding: 15px;
-            color: #7952b3;
+            color: #ffffffff;
             font-size: 14px;
             margin-top: 30px;
         }
@@ -236,3 +236,41 @@ $bag_data = array(
                 }
                 ?>
             </td>
+            
+            <?php
+            // Interactive buttons - conditional check for interaction
+            ?>
+            <td>
+                <?php 
+                if ($item['stock'] > 0) {
+                    // Normal button
+                    echo '<a href="#" class="cart-action add-btn">Add to Cart</a>';
+                } else {
+                    // Disabled button
+                    echo '<span class="cart-action out-btn">Out of Stock</span>';
+                }
+                ?>
+            </td>
+            
+        </tr>
+    <?php
+    } 
+    ?>
+
+    </tbody>
+    </table>
+    
+    <center>
+        <p style="margin-top: 25px; font-style: italic; color: #5d3f9b;">
+            Check the status column! Item availability (In Stock, Sold Out, Low) is updated automatically.
+        </p>
+    </center>
+
+</div>
+
+<footer>
+    Dantes, Christine May T. | WD-201 | Syris Bag Store
+</footer>
+
+</body>
+</html>
