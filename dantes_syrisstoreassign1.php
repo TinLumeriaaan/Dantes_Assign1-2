@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Syris Bagstore </title>
     <style>
-        /* Basic Styling for the purple-light theme */
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
         
         body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f0ff; /* Light purple background */
+            background-color: #f5f0ff; 
             color: #333;
         }
         
         header {
-            background-color: #7952b3; /* Darker purple header */
+            background-color: #7952b3; 
             color: white;
             padding: 20px;
             text-align: center;
@@ -85,7 +84,7 @@
 <?php
 // PHP Variables and Arrays, Discount price of the products
 $currency = '₱'; 
-$discount_rate = 0.15; // 15% off
+$discount_rate = 0.15; 
 
 // The main content structure (Product Array)
 $bag_data = array(
@@ -145,32 +144,32 @@ $bag_data = array(
         
         echo '<tr>';
         
-        // 1. Image of the products
+        // Image of the products
         echo '<td class="product-img-cell">';
         echo '<img src="' . $item['image_url'] . '" alt="' . $item['name'] . '">';
         echo '</td>';
         
-        // 2. Name and Category
+        // Name and Category
         echo '<td>';
         echo '<strong>' . $item['name'] . '</strong> <br>';
         echo '<small>Category: ' . $item['category'] . '</small>';
         echo '</td>';
         
-        // 3. Description
+        // Description
         echo '<td>' . $item['description'] . '</td>';
         
-        // 4. Original Price 
+        // Original Price 
         echo '<td><del>' . $currency . number_format($item['price'], 2) . '</del></td>';
         
-        // 5. Discounted Price
+        // Discounted Price
         echo '<td class="discount-price">' . $currency . number_format($final_price, 2) . '</td>';
         
-        // End of the table row
+        
         echo '</tr>';
 
     } 
 
-    // Close the table
+    
     echo '</tbody>';
     echo '</table>';
     ?>
