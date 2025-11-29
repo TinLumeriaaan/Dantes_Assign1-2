@@ -11,7 +11,10 @@
             font-family: 'Quicksand', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f0ff; 
+            background-image: url('https://img.freepik.com/premium-vector/bag-background_16643-1435.jpg?semt=ais_hybrid&w=740&q=80');
+            background-repeat: no-repeat;
+            background-size: cover; 
+            background-attachment: fixed;
             color: #333;
         }
         
