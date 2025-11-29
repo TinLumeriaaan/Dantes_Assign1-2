@@ -24,7 +24,7 @@
         }
 
         .container {
-            max-width: 850px; 
+            max-width: 900px; 
             margin: 40px auto;
             padding: 20px;
             background-color: white;
@@ -46,7 +46,7 @@
         }
 
         th, td {
-            padding: 12px;
+            padding: 10px; 
             text-align: left;
             border-bottom: 1px solid #e8dff5;
             font-size: 14px; 
@@ -68,6 +68,28 @@
         .discount-price {
             color: #c45a7d;
             font-weight: bold;
+        }
+
+        
+        .cart-action {
+            display: inline-block;
+            padding: 7px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .add-btn {
+            background-color: #7952b3; 
+            color: white;
+            border: 1px solid #7952b3;
+        }
+        .out-btn {
+            background-color: #d1d1d1;
+            color: #444;
+            border: 1px solid #999;
+            cursor: not-allowed;
         }
 
         footer {
@@ -102,7 +124,7 @@ $bag_data = array(
         "name" => "Elegant Tote Bag",
         "price" => 899,
         "category" => "Women",
-        "stock" => 0, // Out of stock example
+        "stock" => 0, 
         "description" => "Stylish tote bag for work or casual outings",
         "image_url" => "https://vonbaer.com/cdn/shop/files/von_baer_elegance_leather_tote_bag_cognac_tan_color_on_beautiful_female_model_outside.jpg?v=1756795186&width=1000"
     ),
@@ -118,44 +140,10 @@ $bag_data = array(
         "name" => "Crossbody Shoulder Bag",
         "price" => 749.50,
         "category" => "Women",
-        "stock" => 1, // Low stock example
+        "stock" => 1, 
         "description" => "Compact and trendy crossbody bag, hands-free!",
         "image_url" => "https://www.senreve.com/cdn/shop/articles/circa_crossbody_blog_750x.jpg?v=1656453274"
     ),
 );
 
 ?>
-
-<header>
-    <h1>⋆.˚˖࿔ ࣪ Syris Bag Store ⋆.˚˖࿔ ࣪</h1>
-    <p>Style on the go</p>
-</header>
-
-<div class="container">
-    <h2>Our Latest Collection (<?php echo $total_products; ?> Items Listed)</h2>
-    
-    <?php
-    echo '<table>';
-    echo '<thead>';
-    echo '<tr>';
-    echo '<th>Photo</th>';
-    echo '<th>Bag Name / Status</th>';
-    echo '<th>Category / Stock</th>';
-    echo '<th>Original Price</th>';
-    echo '<th>Special Price</th>';
-    echo '</tr>';
-    echo '</thead>';
-    echo '<tbody>';
-
-    //LOOP 
-    foreach($bag_data as $item) { 
-        
-        //Operator
-        $discount_amount = $item['price'] * $discount_rate;
-        $final_price = $item['price'] - $discount_amount;
-
-        // Conditional Statement - Ternary Operator 
-        $stock_status = ($item['stock'] > 0) ? '<span style="color: green;">In Stock</span>' : '<span style="color: red;">SOLD OUT</span>';
-        
-        
-        echo '<tr>';
