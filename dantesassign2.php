@@ -181,3 +181,55 @@ $bag_data = array(
         // Conditional Statement - Ternary Operator 
         $stock_status = ($item['stock'] > 0) ? '<span style="color: green; font-weight: 500;">In Stock</span>' : '<span style="color: red; font-weight: 500;">SOLD OUT</span>';
         
+        
+        ?>
+        <tr>
+            
+            <td class="product-img-cell">
+                <img src="<?php echo $item['image_url']; ?>" alt="<?php echo $item['name']; ?>">
+            </td>
+            
+            <td>
+                <strong><?php echo $item['name']; ?></strong> <br>
+                <?php echo $stock_status; ?>
+            </td>
+
+            <?php
+            // Category and Stock Check (IF-ELSEIF-ELSE)
+            ?>
+            <td>
+                <small>Category: <?php echo $item['category']; ?></small><br>
+                
+                <?php
+                if ($item['stock'] == 0) {
+                    echo 'Stock: Out of stock';
+                } elseif ($item['stock'] <= 2) {
+                    echo '<span style="color: orange; font-weight: bold;">Stock: LOW! (Only ' . $item['stock'] . ')</span>';
+                } else {
+                    echo 'Stock: Plenty';
+                }
+                ?>
+                
+            </td>
+            
+            <td>
+                <del><?php echo $currency . number_format($item['price'], 2); ?></del>
+            </td>
+            
+            <?php
+            // Discounted Price - Switch Statement
+            ?>
+            <td class="discount-price">
+                <?php
+                switch ($item['category']) {
+                    case 'Women':
+                        echo $currency . number_format($final_price, 2) . ' (Women\'s Sale!)';
+                        break;
+                    case 'Men':
+                        echo $currency . number_format($final_price, 2) . ' (Men\'s Sale!)';
+                        break;
+                    default:
+                        echo $currency . number_format($final_price, 2);
+                }
+                ?>
+            </td>
