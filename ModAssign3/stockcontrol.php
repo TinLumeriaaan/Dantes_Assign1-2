@@ -22,11 +22,7 @@ function get_tax_due($price, $quantity, $tax_rate_percent)
     return $total_value * ($tax_rate_percent / 100);
 }
 
-
-
 //Product Inventory Data 
-
-
 // Data Array 
 $inventory_products = [
     'Classic Leather Backpack' => ['price' => 1299.00, 'stock' => 12],
@@ -37,7 +33,6 @@ $inventory_products = [
     'Vintage Canvas Satchel'  => ['price' => 950.00, 'stock' => 8],  
     'Laptop Messenger Bag'    => ['price' => 1899.00, 'stock' => 15], 
 ];
-
 
 ?>
 
@@ -78,3 +73,4 @@ $inventory_products = [
         
         
         ?>
+        
