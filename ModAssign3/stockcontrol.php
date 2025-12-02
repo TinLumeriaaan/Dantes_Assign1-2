@@ -10,7 +10,7 @@ function get_reorder_message($stock)
 
 function get_total_value($price, $quantity)
 {
-    // Price x Quantity.
+    // Price * Quantity.
     return $price * $quantity;
 }
 
