@@ -118,7 +118,7 @@ $bag_data = array(
             
         </tr>
     <?php
-    } // End of Foreach Loop
+    } 
     ?>
 
     </tbody>
@@ -126,7 +126,7 @@ $bag_data = array(
     
     <center>
         <p style="margin-top: 25px; font-style: italic; color: #5d3f9b;">
-            Stock status (In Stock, Sold Out, Low) is updated automatically 
+            Stock status (In Stock, Sold Out, Low) is updated automatically. 
         </p>
     </center>
 
