@@ -1,6 +1,6 @@
 <?php
 
-$tax_rate = 12; // 12% is the tax rate.
+$tax_rate = 12; 
 
 
 $currency = '₱'; 
@@ -10,14 +10,16 @@ $currency = '₱';
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Syris Bagstore </title>
+    <title>Syris Bagstore</title>
     <style>
+        
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&display=swap');
         
         body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
             padding: 0;
+            
             
             background-color: #f5f0ff; 
             background-image: url('https://images.unsplash.com/photo-1549490159-f815049b71f2?q=80&w=2000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
@@ -26,11 +28,11 @@ $currency = '₱';
             background-size: cover; 
             background-attachment: fixed;
             
-            color: #333; 
+            color: #333;
         }
         
         header {
-            background-color: #7952b3; 
+            background-color: #7952b3;
             color: white;
             padding: 20px;
             text-align: center;
@@ -85,7 +87,41 @@ $currency = '₱';
             font-weight: 700;
         }
         
-       
+        
+        .product-img-cell img {
+            width: 90px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        
+        
+        .discount-price {
+            color: #c45a7d;
+            font-weight: bold;
+        }
+        
+        .cart-action {
+            display: inline-block;
+            padding: 7px 10px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            text-align: center;
+        }
+        .add-btn {
+            background-color: #7952b3; 
+            color: white;
+            border: 1px solid #7952b3;
+        }
+        .out-btn {
+            background-color: #d1d1d1;
+            color: #444;
+            border: 1px solid #999;
+            cursor: not-allowed;
+        }
+
         .reorder-yes {
             color: red;
             font-weight: bold;
@@ -97,7 +133,7 @@ $currency = '₱';
         footer {
             text-align: center;
             padding: 15px;
-            color: white; 
+            color: white;
             font-size: 14px;
             margin-top: 30px;
         }
@@ -111,6 +147,6 @@ $currency = '₱';
     <p>
         <a href="dantesassign2.php">Main Sales Page</a>
         |
-        <a href="stock_control.php">Stock Control</a>
+        <a href="stockcontrol.php">Stock Control</a>
     </p>
 </header>
